@@ -6,10 +6,13 @@ import sys
 import time
 import ssl
 
-from pyVmomi import vim, vmodl
-from pyVim.task import WaitForTask
-from pyVim import connect
-from pyVim.connect import Disconnect, SmartConnect, GetSi
+try:
+    from pyVmomi import vim, vmodl
+    from pyVim.task import WaitForTask
+    from pyVim import connect
+    from pyVim.connect import Disconnect, SmartConnect, GetSi
+except ImportError:
+    print('\'pyvmomi\' is not installed. Install the same and try again.')
 
 SNAPS_LIST = 'snaps_list'
 SNAPS_CREATE = 'snaps_create'
