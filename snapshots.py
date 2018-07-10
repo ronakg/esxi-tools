@@ -12,7 +12,8 @@ try:
     from pyVim import connect
     from pyVim.connect import Disconnect, SmartConnect, GetSi
 except ImportError:
-    print('\'pyvmomi\' is not installed. Install the same and try again.')
+    print('\'pyvmomi\' is not installed. Install it using \'pip install pyvmomi\' same and try again.')
+    sys.exit(1)
 
 SNAPS_LIST = 'snaps_list'
 SNAPS_CREATE = 'snaps_create'
